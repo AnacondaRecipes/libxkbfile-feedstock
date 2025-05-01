@@ -24,7 +24,7 @@ requirements:
     - pkg-config
     - xorg-util-macros >=1.8
   host:
-    - xorg-kbproto
+    - xorg-xorgproto
     - xorg-libx11
     - pthread-stubs
 
