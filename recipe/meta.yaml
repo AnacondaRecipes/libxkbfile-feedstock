@@ -37,7 +37,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: COPYING
-  summary: 'Parses the XKB configuration data files'
+  summary: Parses the XKB configuration data files
   doc_url: https://www.x.org/wiki/
   dev_url: https://gitlab.freedesktop.org/xorg/lib/libxkbfile
 
