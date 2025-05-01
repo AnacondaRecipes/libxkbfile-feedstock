@@ -22,7 +22,7 @@ requirements:
     - gnuconfig
     - automake
     - pkg-config
-    - xorg-util-macros
+    - xorg-util-macros >=1.8
   host:
     - xorg-kbproto
     - xorg-libx11
