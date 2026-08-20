@@ -24,7 +24,7 @@ requirements:
     - pkg-config
   host:
     - python
-    - xorg-kbproto >=1.0.7
+    - xorg-kbproto ==1.0.7
     - xorg-xorgproto {{ xorg_xorgproto }}
     - xorg-libx11 {{ xorg_libx11 }}
 
