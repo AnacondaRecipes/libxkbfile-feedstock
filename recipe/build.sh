@@ -13,3 +13,4 @@ set -ex
 # make check
 meson setup builddir --prefix=${PREFIX}
 meson compile -C builddir
+meson install -C builddir
