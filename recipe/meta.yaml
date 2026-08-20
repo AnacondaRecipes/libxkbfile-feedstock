@@ -31,7 +31,6 @@ requirements:
 
 test:
   commands:
-    - ls -la "${PREFIX}/lib/"
     - test -f "${PREFIX}/lib/libxkbfile${SHLIB_EXT}"
 
 about:
