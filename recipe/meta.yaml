@@ -19,19 +19,19 @@ requirements:
   build:
     - {{ stdlib('c') }}
     - {{ compiler('c') }}
-    - meson
-    - ninja
+    - meson >=0.57.0
+    - ninja-base
     - pkg-config
     - xorg-util-macros >=1.8
   host:
     - python
-    - xorg-xorgproto
-    - xorg-libx11
+    - xorg-xorgproto {{ xorg_xorgproto }}
+    - xorg-libx11 {{ xorg_libx11 }}
     - pthread-stubs
 
 test:
   commands:
-    - ls -la "${PREFIX}/lib/" | grep libxkbfile
+    - ls -la "${PREFIX}/lib/"
     - test -f "${PREFIX}/lib/libxkbfile${SHLIB_EXT}"
 
 about:
@@ -40,6 +40,8 @@ about:
   license_family: MIT
   license_file: COPYING
   summary: Parses the XKB configuration data files
+  description: |
+    libxkbfile is used by the X servers and utilities to parse the XKB configuration data files.
   doc_url: https://www.x.org/wiki/
   dev_url: https://gitlab.freedesktop.org/xorg/lib/libxkbfile
 
@@ -47,3 +49,6 @@ extra:
   recipe-maintainers:
     - scopatz
     - erykoff
+  skip-lints:
+    - python_build_tools_in_host
+    - missing_imports_or_run_test_py
