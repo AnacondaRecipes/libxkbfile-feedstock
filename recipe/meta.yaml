@@ -23,7 +23,6 @@ requirements:
     - ninja-base
     - pkg-config
   host:
-    - xorg-kbproto ==1.0.7
     - xorg-xorgproto {{ xorg_xorgproto }}
     - xorg-libx11 {{ xorg_libx11 }}
 
@@ -47,4 +46,6 @@ extra:
     - scopatz
     - erykoff
   skip-lints:
+    # /requirements/build/2: python_build_tools_in_host: Python build tools should be in the host section
+    - python_build_tools_in_host
     - missing_imports_or_run_test_py
